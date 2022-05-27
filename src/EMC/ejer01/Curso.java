@@ -1,29 +1,36 @@
 package EMC.ejer01;
 
 public class Curso {
-    private String numCurso;
-    private String docente;
-    
-    public Curso(String numCurso, String docente) {
-        this.numCurso = numCurso;
-        this.docente = docente;
+
+    private String nombre;
+
+    private Docente[] docente;
+
+    private int contador;
+
+    public Curso(String nombre) {
+        this.nombre = nombre;
+        
+        this.contador = 0;
+
+        this.docente = new Docente[3];
     }
 
-    public String getNumCurso() {
-        return this.numCurso;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNumCurso(String numCurso) {
-        this.numCurso = numCurso;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getDocente() {
-        return this.docente;
+    public Docente[] getDocente() {
+        return docente;
     }
 
-    public void setDocente(String docente) {
-        this.docente = docente;
+    public void setDocente(Docente docente) {
+        this.docente[this.contador]  = docente;
+        this.contador++;
     }
-
-    
+   
 }
